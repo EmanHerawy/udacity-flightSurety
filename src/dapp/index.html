@@ -13,20 +13,66 @@
 
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">FlightSurety</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
+    <!-- airline register and fund -->
+    <main class="container">
 
+        <div id="display-wrapper" class="top-20">
+            <div> <label class="form">Account</label>
+                <label class="form" id="account">Account</label></div>
+            <div> <label class="form">Insurance balance</label>  <input type="text" placeholder="Airline Address" id="passanger-airline">
+                <button onclick="App.getPassangerInsuranceBalance()" class="btn btn-primary">get data</button>
+                <label class="form" id="passanger">Account</label></div>
+
+            <div> <label class="form">Airline registeration Status</label>
+                <label class="form" id="status">Account</label> 
+                <button onclick="App.fund()"
+                    class="btn btn-primary">Fund</button> </div>
+
+            <div> <label class="form">Passanger credit</label>
+                <label class="form" id="credit">Account</label><button onclick="App.pay()"
+                    class="btn btn-primary">withdraw</button> </div>
+        </div>
+        <div id="accountData-wrapper" class="top-20">
+        </div>
+        <div class="row top-20">
+            <label class="form">Airline</label> <input type="text" id="reg-Airline">
+            <button onclick="App.register()" class="btn btn-primary">Register Airline</button>
+        </div>
+    </main>
+    <!-- passanger buy flight -->
+    <!-- passanger get refund -->
     <main class="container">
 
         <div id="display-wrapper" class="top-20">
         </div>
         <div class="row top-20">
-            <label class="form">Flight</label> <input type="text" id="flight-number"> <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
+            <label class="form">Flight</label> <input type="text" id="flight-number">
+            <btn class="btn btn-primary" id="submit-oracle">Submit to Oracles</btn>
         </div>
     </main>
+    <!-- display stored flights -->
+    <main class="container">
+
+        <div id="display-wrapper" class="top-20">
+        </div>
+        <div class="row top-20">
+            <table style="width:100%" id="myTable">
+                <tr>
+                    <th>Airline</th>
+                    <th>flight ID</th>
+                    <th>Timestamp</th>
+                </tr>
+
+
+            </table>
+        </div>
+    </main>
+    <!-- <script src="index.js"></script> -->
 
 </body>
 
